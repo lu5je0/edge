@@ -1,3 +1,9 @@
+let g:one_init_flag = get(g:, 'one_init_flag', 0)
+if g:one_init_flag == 1
+    finish
+endif
+let g:one_init_flag = 1
+
 " -----------------------------------------------------------------------------
 " Name:         Edge
 " Description:  Clean & Elegant Color Scheme inspired by Atom One and Material
@@ -623,7 +629,7 @@ call edge#highlight('Lf_hl_popup_regexMode', s:palette.fg, s:palette.bg3)
 call edge#highlight('Lf_hl_popup_lineInfo', s:palette.purple, s:palette.bg4)
 call edge#highlight('Lf_hl_popup_total', s:palette.bg0, s:palette.purple)
 call edge#highlight('Lf_hl_popup_cursor', s:palette.bg0, s:palette.green)
-highlight! link Lf_hl_cursorline Fg
+highlight! link Lf_hl_cursorline Yellow
 highlight! link Lf_hl_selection DiffAdd
 highlight! link Lf_hl_rgHighlight Visual
 highlight! link Lf_hl_gtagsHighlight Visual
